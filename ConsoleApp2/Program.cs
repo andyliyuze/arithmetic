@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
- 
+
 namespace ConsoleApp2
 {
     class Program
@@ -137,18 +137,18 @@ namespace ConsoleApp2
             equeue.EnQueue(5);
             equeue.EnQueue(6);
             equeue.EnQueue(7);
-             var o= equeue.DeQueue();
+            var o = equeue.DeQueue();
             o = equeue.DeQueue();
             equeue.EnQueue(8);
             o = equeue.DeQueue();
             Console.WriteLine("Hello World!");
 
 
-            int[] array = { 49, 38, 65, 97, 76, 13, 27 ,2,1,100,11,50,49,65};
-          int[] array2 = { 69,39,55,100,78,22,99 };
+            int[] array = { 49, 38, 65, 97, 76, 13, 27, 2, 1, 100, 11, 50, 49, 65 };
+            int[] array2 = { 69, 39, 55, 100, 78, 22, 99 };
             QuickSort.sort(array2, 0, array2.Length - 1);
             Console.ReadLine();
-          
+
         }
     }
 
@@ -156,7 +156,7 @@ namespace ConsoleApp2
 
     //入队时，将元素压入s1。
 
-   // 出队时，判断s2是否为空，如不为空，则直接弹出顶元素；如为空，则将s1的元素逐个“倒入”s2，把最后一个元素弹出并出队。
+    // 出队时，判断s2是否为空，如不为空，则直接弹出顶元素；如为空，则将s1的元素逐个“倒入”s2，把最后一个元素弹出并出队。
 
     class Equeue
     {
@@ -173,12 +173,12 @@ namespace ConsoleApp2
 
         public void EnQueue(object o)
         {
-          
+
             s1.Push(o);
         }
         public object DeQueue()
         {
- 
+
             if (s2.Count != 0) { return s2.Pop(); }
             else
             {
@@ -187,7 +187,7 @@ namespace ConsoleApp2
                     var item = s1.Pop();
                     s2.Push(item);
                 }
-                return  s2.Pop();
+                return s2.Pop();
             }
         }
     }
