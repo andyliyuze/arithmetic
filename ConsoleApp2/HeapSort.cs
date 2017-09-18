@@ -15,7 +15,7 @@ public class HeapSort
             Console.WriteLine("调整");
             HeapAdjust(list, i, list.Count);
         }
-        //进行调整，每次调整代表着以parnet为根节点的二叉树的最大值会上浮到最顶点
+        //进行调整，保持为大顶堆，那么最大值就会上浮到顶点位置
         for (int i = list.Count - 1; i >= 0; i--)
         {
             int temp = list[0];
@@ -24,7 +24,7 @@ public class HeapSort
             HeapAdjust(list, 0, i);
         }    
     }
-    //一次调整完成，代表着以parnet为根节点的二叉树的最大值会上浮到最顶点
+    //一次调整完成，以parnet为根节点的二叉树,parent代表的值会下沉到该树的合适位置，从而继续保持为大顶堆
     static void HeapAdjust(List<int> list, int parent, int length)
     {
 
