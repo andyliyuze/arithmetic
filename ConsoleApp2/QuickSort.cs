@@ -4,6 +4,9 @@ namespace ConsoleApp2
 {
    public class QuickSort
     {
+
+
+       
        
         /**一次排序单元，完成此方法，key左边都比key小，key右边都比key大。
           
@@ -20,22 +23,32 @@ namespace ConsoleApp2
         **@return单元排序后的数组 */
         private static int sortUnit(int[] array, int low, int high)
         {
+
+            //在array[low]处挖坑
             int key = array[low];
             while (low < high)
             {
+
+
+              
                 /*从后向前搜索比key小的值*/
                 while (array[high] >= key && high > low)
                 {
                     --high;
                 }
                 /*比key小的放左边*/
+
+                //在array[low]填坑,并在array[high]处挖坑
                 array[low] = array[high];
+
+               
                 /*从前向后搜索比key大的值，比key大的放右边*/
                 while (array[low] <= key && high > low)
                 {
                     ++low;
                 }
                 /*比key大的放右边*/
+                //在array[high]填坑,并在array[low]处挖坑
                 array[high] = array[low];
             }
             /*左边都比key小，右边都比key大。//将key放在游标当前位置。//此时low等于high */
@@ -51,6 +64,8 @@ namespace ConsoleApp2
         /**快速排序 
         *@paramarry 
         *@return */
+
+          
         public static void sort(int[] array, int low, int high)
         {
             //因为数组是引用类型，所以不用返回新的数组

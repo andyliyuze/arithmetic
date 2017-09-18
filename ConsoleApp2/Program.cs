@@ -65,6 +65,8 @@ namespace ConsoleApp2
             list.Clear();
             arrIndex = 0;
             arr2Index = 0;
+
+
             //索引递进法，双方数组从0处开始对比，相同就是交集，小的一方索引进1
             while (arrIndex < arr.Length && arr2Index < arr2.Length)
             {
@@ -143,10 +145,33 @@ namespace ConsoleApp2
             o = equeue.DeQueue();
             Console.WriteLine("Hello World!");
 
-
+            //快排
             int[] array = { 49, 38, 65, 97, 76, 13, 27, 2, 1, 100, 11, 50, 49, 65 };
             int[] array2 = { 69, 39, 55, 100, 78, 22, 99 };
             QuickSort.sort(array2, 0, array2.Length - 1);
+
+            var a = new
+            {
+                Id = Guid.NewGuid()
+            };
+            List<object> list2 = new List<object>();
+            list2.Add(a);
+            List<object> list3 = new List<object>();
+            list3.Add(a);
+            
+            //冒泡排
+
+            //BubbleSort.sort(array);
+
+
+
+            //堆排
+            List<int> array3 = new List<int>(){20, 50, 20, 40, 70, 10, 80,30,60 ,30,90,75,65};
+          //  array3 = new List<int>() {10,90,70,30,60,30,40 };
+            HeapSort.Sort(array3);
+
+
+
             Console.ReadLine();
 
         }
