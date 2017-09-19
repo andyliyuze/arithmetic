@@ -171,6 +171,9 @@ namespace ConsoleApp2
             HeapSort.Sort(array3);
 
 
+            //直接插入排
+            int[] array4={ 1,10,8,7,9};
+            InsertSort.Sort(array4);
 
             Console.ReadLine();
 
