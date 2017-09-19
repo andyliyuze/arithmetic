@@ -167,7 +167,7 @@ namespace ConsoleApp2
 
             //堆排
             List<int> array3 = new List<int>(){20, 50, 20, 40, 70, 10, 80,30,60 ,30,90,75,65};
-          //  array3 = new List<int>() {10,90,70,30,60,30,40 };
+          
             HeapSort.Sort(array3);
 
 
