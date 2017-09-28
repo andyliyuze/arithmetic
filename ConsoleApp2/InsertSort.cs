@@ -16,6 +16,9 @@ namespace ConsoleApp2
 
         public static void Sort(int[] arr)
         {
+
+
+           
             for (int i = 1; i < arr.Length; i++)
             {
                 int temp = arr[i];
