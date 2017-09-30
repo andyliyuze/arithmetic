@@ -175,8 +175,18 @@ namespace ConsoleApp2
             int[] array4={ 1,10,8,7,9};
             InsertSort.Sort(array4);
 
+
+
+
+            //不使用第三个变量，交换两个变量
+            swap.execute(99,1);
+
+
+
             Console.ReadLine();
 
+
+          
         }
     }
 
