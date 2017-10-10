@@ -182,6 +182,11 @@ namespace ConsoleApp2
             swap.execute(99,1);
 
 
+            //单例
+            var single = SingletonV4.Instance;
+
+            var single5 = SingletonV5.Instance;
+            single5.say();
 
             Console.ReadLine();
 
