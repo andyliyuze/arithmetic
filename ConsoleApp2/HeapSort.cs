@@ -36,7 +36,6 @@ public class HeapSort
     //一次调整完成，以parnet为根节点的二叉树,parent代表的值会下沉到该树的合适位置，从而继续保持为大顶堆
     static void HeapAdjust(List<int> list, int parent, int length)
     {
-
         int temp = list[parent];
         //child为左子节点索引
         int child = 2 * parent + 1;
@@ -53,7 +52,6 @@ public class HeapSort
             parent = child;
             child = 2 * parent + 1;
         }
-
         list[parent] = temp;
     }
 
@@ -85,7 +83,6 @@ public class HeapSort
             list[child] = temp;
             HeapAdjust2(list, child, length);
         }
-
     }
 
 
