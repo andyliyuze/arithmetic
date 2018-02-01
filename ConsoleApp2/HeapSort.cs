@@ -5,9 +5,18 @@ using System.Collections.Generic;
 public class HeapSort
 {
     //堆排序
+
+    //首先构造大顶堆
+    //1,从最末的二叉树开始调整，调整一次就是使得该树的父节点都大于子节点。
+    //2然后往右，往上调整，一直重复至将最顶的树调整完成。
+
+    //3然后开始循环调整，将堆顶元素与堆末元素互换位置，这样最大元素就放在了最后一位
+    //4调整堆顶元素，使其下沉调整。
+    //5如此重复至只剩一个元素、
+
     public static void Sort(List<int> list)
     {
-    //    HeapAdjust2(list, 0, list.Count);
+        //    HeapAdjust2(list, 0, list.Count);
 
         //首先构造大顶堆，即每个父节点都大于它的子节点，构造大顶堆需要进行多次调整
         for (int i = list.Count / 2 - 1; i >= 0; i--)
@@ -48,7 +57,14 @@ public class HeapSort
         list[parent] = temp;
     }
 
-    //递归遍历树
+
+
+    /// <summary>
+    /// 递归遍历树从而完成一次调整，使其还是大顶堆
+    /// </summary>
+    /// <param name="list"></param>
+    /// <param name="parent">需要下沉调整的父节点</param>
+    /// <param name="length"></param>
     static void HeapAdjust2(List<int> list, int parent, int length)
     {
         //若无子节点则停止递归

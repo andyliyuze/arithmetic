@@ -17,33 +17,28 @@ namespace ConsoleApp2
 
         }
 
+        //1正序，每一趟都将最大值放在最后
+        //2每趟都是取前两个进行比较
+        //3往后每一趟比上一次少一次比较
         public static void sort(int[] array)
         {
-
             for (int i = 0; i <= array.Length; i++)
             {
-                for (int j = 0; j <array.Length - i; j++)
+                for (int j = 0; j <array.Length - 1; j++)
                 {
-
-
                     if (array[j] < array[j + 1])
                     {
-
-
                         swap(array, j, (j + 1));
                     }
-
-
                 }
-
-
-
-
             }
         }
 
 
-
+        //正序
+        //1一大趟都两小趟，前一趟比较n次，得到最大值放在最后一位
+        //2后一趟比较n-1次，从后往前比较，得出最小一位放在第一位
+        //往后的每一大躺都比之前少两次。
         public static void   CocktailSort(int[] A, int n)
         {
             int left = 0;                            // 初始化边界
