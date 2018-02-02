@@ -147,7 +147,7 @@ namespace ConsoleApp2
 
             //快排
             int[] array = { 49, 38, 65, 97, 76, 13, 27, 2, 1, 100, 11, 50, 49, 65 };
-            int[] array2 = { 69, 39, 55, 100, 78, 22, 99 };
+            int[] array2 = { 69,80, 55, 100, 78, 68, 99 };
             QuickSort.sort(array2, 0, array2.Length - 1);
 
             var a = new
