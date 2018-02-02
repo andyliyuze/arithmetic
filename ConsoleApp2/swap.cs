@@ -26,14 +26,10 @@ namespace ConsoleApp2
 
         public static void execute2(int a, int b)
         {
-
-
             //两者差距
             a = b-a;
             //b减去两个差距
             b= b - a;
-
-
         }
 
 
