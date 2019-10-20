@@ -180,7 +180,7 @@ namespace ConsoleApp2
 
             //不使用第三个变量，交换两个变量
             swap.execute(99,1);
-
+            swap.execute2(99,1);
 
             //单例
             var single = SingletonV4.Instance;
@@ -204,8 +204,7 @@ namespace ConsoleApp2
     class Equeue
     {
         public Equeue()
-        {
-
+        {       
             s1 = new Stack();
             s2 = new Stack();
         }
@@ -216,12 +215,11 @@ namespace ConsoleApp2
 
         public void EnQueue(object o)
         {
-
             s1.Push(o);
         }
         public object DeQueue()
         {
-
+           
             if (s2.Count != 0) { return s2.Pop(); }
             else
             {
