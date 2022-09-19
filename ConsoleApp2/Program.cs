@@ -7,9 +7,9 @@ namespace ConsoleApp2
     class Program
     {
         static void Main(string[] args)
-        {
-            //求两个有序数组的交集
-
+        { 
+            var aa = new SlidingWindow().SS("efghiabcdjsfslskdjdhdhdhddhdhdaeffghicgbbklmn", "efghif");
+            //求两个有序数组的交集 
             //Hashtable解法，将其中一个放入hash表
             Hashtable ht = new Hashtable
             {
@@ -29,7 +29,6 @@ namespace ConsoleApp2
                 if (ht.ContainsValue(i))
                 {
                     list.AddLast(i);
-
                 }
                 j++;
 
@@ -147,7 +146,7 @@ namespace ConsoleApp2
 
             //快排
             int[] array = { 49, 38, 65, 97, 76, 13, 27, 2, 1, 100, 11, 50, 49, 65 };
-            int[] array2 = { 69,80, 55, 100, 78, 68, 99 };
+            int[] array2 = { 69, 80, 55, 100, 78, 68, 99 };
             QuickSort.sort(array, 0, array.Length - 1);
 
             var a = new
@@ -158,7 +157,7 @@ namespace ConsoleApp2
             list2.Add(a);
             List<object> list3 = new List<object>();
             list3.Add(a);
-            
+
             //冒泡排
 
             //BubbleSort.sort(array);
@@ -166,21 +165,21 @@ namespace ConsoleApp2
 
 
             //堆排
-            List<int> array3 = new List<int>(){20, 50, 20, 40, 70, 10, 80,30,60 ,30,90,75,65};
-          
+            List<int> array3 = new List<int>() { 20, 50, 20, 40, 70, 10, 80, 30, 60, 30, 90, 75, 65 };
+
             HeapSort.Sort(array3);
 
 
             //直接插入排
-            int[] array4={ 1,10,8,7,9};
+            int[] array4 = { 1, 10, 8, 7, 9 };
             InsertSort.Sort(array4);
 
 
 
 
             //不使用第三个变量，交换两个变量
-            swap.execute(99,1);
-            swap.execute2(99,1);
+            swap.execute(99, 1);
+            swap.execute2(99, 1);
 
             //单例
             var single = SingletonV4.Instance;
@@ -191,7 +190,7 @@ namespace ConsoleApp2
             Console.ReadLine();
 
 
-          
+
         }
     }
 
@@ -204,7 +203,7 @@ namespace ConsoleApp2
     class Equeue
     {
         public Equeue()
-        {       
+        {
             s1 = new Stack();
             s2 = new Stack();
         }
@@ -219,7 +218,7 @@ namespace ConsoleApp2
         }
         public object DeQueue()
         {
-           
+
             if (s2.Count != 0) { return s2.Pop(); }
             else
             {

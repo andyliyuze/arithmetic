@@ -94,11 +94,11 @@ namespace ConsoleApp2
             {
                 lock (syncRoot)
                 {
-                    
-                  
-                        if (instance == null)
-                            instance = new SingletonV3();
-                    
+
+
+                    if (instance == null)
+                        instance = new SingletonV3();
+
                 }
 
                 return instance;

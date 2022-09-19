@@ -4,10 +4,7 @@ namespace ConsoleApp2
 {
    public class QuickSort
     {
-
-
-       
-       
+         
         /**一次排序单元，完成此方法，key左边都比key小，key右边都比key大。
           
  
